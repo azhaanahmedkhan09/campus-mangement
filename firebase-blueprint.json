@@ -1,0 +1,137 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Public and role profile for an authenticated Campus Orbit user",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "role": { "type": "string", "enum": ["super_admin", "college_admin", "faculty", "student", "parent"] },
+        "departmentId": { "type": "string", "maxLength": 64 },
+        "status": { "type": "string", "enum": ["active", "inactive", "suspended"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "role", "status", "createdAt", "updatedAt"]
+    },
+    "StudentRecord": {
+      "title": "StudentRecord",
+      "description": "Academic student information record",
+      "type": "object",
+      "properties": {
+        "studentId": { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fullName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "department": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "course": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "semester": { "type": "number" },
+        "attendancePct": { "type": "number" },
+        "cgpa": { "type": "number" },
+        "feeStatus": { "type": "string", "enum": ["Paid", "Partial", "Pending", "Overdue"] },
+        "status": { "type": "string", "enum": ["Active", "Graduated", "Inactive"] },
+        "ownerId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["studentId", "fullName", "department", "course", "semester", "attendancePct", "cgpa", "feeStatus", "status", "ownerId", "createdAt", "updatedAt"]
+    },
+    "AttendanceSession": {
+      "title": "AttendanceSession",
+      "description": "QR and manual attendance session created by faculty or administrator",
+      "type": "object",
+      "properties": {
+        "sessionCode": { "type": "string", "minLength": 4, "maxLength": 64 },
+        "subjectCode": { "type": "string", "minLength": 2, "maxLength": 32 },
+        "subjectName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "department": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "semester": { "type": "number" },
+        "facultyId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "status": { "type": "string", "enum": ["active", "closed"] },
+        "presentCount": { "type": "number" },
+        "totalStudents": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["sessionCode", "subjectCode", "subjectName", "department", "semester", "facultyId", "status", "presentCount", "totalStudents", "createdAt", "updatedAt"]
+    },
+    "CollaborationProject": {
+      "title": "CollaborationProject",
+      "description": "Interdisciplinary student collaboration project in the Campus Collaboration Hub",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 3, "maxLength": 140 },
+        "domain": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "department": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 1500 },
+        "ownerId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "ownerName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "teamSizeTarget": { "type": "number" },
+        "currentMembersCount": { "type": "number" },
+        "status": { "type": "string", "enum": ["Planning", "In Progress", "Under Review", "Completed", "On Hold"] },
+        "progressPct": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "domain", "department", "description", "ownerId", "ownerName", "teamSizeTarget", "currentMembersCount", "status", "progressPct", "createdAt", "updatedAt"]
+    },
+    "GrievanceRecord": {
+      "title": "GrievanceRecord",
+      "description": "Confidential student or faculty grievance ticket",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 3, "maxLength": 140 },
+        "category": { "type": "string", "minLength": 2, "maxLength": 64 },
+        "priority": { "type": "string", "enum": ["Low", "Medium", "High", "Critical"] },
+        "description": { "type": "string", "minLength": 5, "maxLength": 1500 },
+        "status": { "type": "string", "enum": ["Submitted", "Under Review", "Assigned", "In Progress", "Resolved", "Rejected"] },
+        "resolutionNotes": { "type": "string", "maxLength": 1000 },
+        "ownerId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "category", "priority", "description", "status", "resolutionNotes", "ownerId", "createdAt", "updatedAt"]
+    },
+    "CampusNotice": {
+      "title": "CampusNotice",
+      "description": "Institutional, department, or exam notice published on Campus Orbit",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 3, "maxLength": 140 },
+        "category": { "type": "string", "enum": ["Institutional", "Department", "Examination", "Event", "Placement"] },
+        "audience": { "type": "string", "enum": ["All", "Students", "Faculty", "Parents", "Admins"] },
+        "content": { "type": "string", "minLength": 5, "maxLength": 2000 },
+        "authorId": { "type": "string", "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "category", "audience", "content", "authorId", "authorName", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile and role assignment"
+    },
+    "/students/{studentDocId}": {
+      "schema": { "$ref": "#/entities/StudentRecord" },
+      "description": "Student academic records"
+    },
+    "/attendanceSessions/{sessionId}": {
+      "schema": { "$ref": "#/entities/AttendanceSession" },
+      "description": "QR and manual attendance sessions"
+    },
+    "/collaborationProjects/{projectId}": {
+      "schema": { "$ref": "#/entities/CollaborationProject" },
+      "description": "Campus Collaboration Hub projects"
+    },
+    "/grievances/{grievanceId}": {
+      "schema": { "$ref": "#/entities/GrievanceRecord" },
+      "description": "Confidential student and campus grievances"
+    },
+    "/notices/{noticeId}": {
+      "schema": { "$ref": "#/entities/CampusNotice" },
+      "description": "Institutional notices and announcements"
+    }
+  }
+}

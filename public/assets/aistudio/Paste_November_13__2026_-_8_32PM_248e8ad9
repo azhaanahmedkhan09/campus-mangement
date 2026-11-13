@@ -1,0 +1,1349 @@
+# MASTER PROMPT: BUILD CAMPUS ORBIT
+## Unified Multi-Role Academic Operations & Smart Campus Management System
+
+### ROLE AND DEVELOPMENT INSTRUCTIONS
+
+Act as a senior full-stack software architect, enterprise application developer, UI/UX designer, database architect, Firebase specialist and cloud security engineer.
+
+Your task is to design and develop a complete, modern, scalable, professional and fully functional college management website named **CAMPUS ORBIT**.
+
+The application must be developed as a comprehensive digital campus ecosystem that connects students, faculty, administrators, parents and institutional management through one centralized platform.
+
+This is not a basic college website, static dashboard, landing page or simple CRUD application.
+
+Build a complete enterprise-style academic management system with real authentication, role-based dashboards, database integration, real-time updates, project collaboration, academic management, analytics and mobile responsiveness.
+
+Do not stop after creating the homepage. Implement the complete application.
+
+---
+
+# 1. PROJECT IDENTITY
+
+**Application Name:** Campus Orbit
+
+**Project Title:** Campus Orbit — Unified Multi-Role Academic Operations & Smart Campus Management System.
+
+**Domain:** Education Technology (EdTech), Enterprise College Management, Cloud Computing and Progressive Web Applications.
+
+**Target Audience:**
+- College Administrators
+- Principal and Dean
+- Department Heads
+- Faculty and Professors
+- Students
+- Parents and Guardians
+
+### Project Vision
+
+Campus Orbit is an integrated digital campus operating platform designed to modernize academic administration, student engagement, faculty operations and institutional communication.
+
+It brings all major college activities into one centralized digital environment.
+
+The platform should eliminate disconnected systems, manual attendance registers, paper-based administration, fragmented academic records and inefficient communication.
+
+Its main goal is to create a smart, transparent, collaborative and connected educational ecosystem.
+
+---
+
+# 2. TECHNOLOGY STACK
+
+Use the following technology stack.
+
+### Frontend
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
+- Framer Motion / Motion
+- Recharts
+- React Router
+
+### Backend and Database
+- Google Firebase
+- Firebase Authentication
+- Google Cloud Firestore
+- Firebase Storage
+- Firebase Cloud Functions
+
+### Additional Technologies
+- Progressive Web Application (PWA)
+- Service Workers
+- IndexedDB
+- QR Code Generation
+- QR Code Scanner
+- CSV and Excel import/export
+- PDF generation
+- Google OAuth
+- Firestore real-time listeners
+
+Use a modular and scalable architecture.
+
+Do not hardcode database records into components.
+
+Separate frontend presentation, business logic, database operations and authentication services.
+
+If Firebase credentials are not available, create a clearly identified demo mode with realistic sample data and a clean Firebase integration layer. Never present demo operations as successfully persisted production data.
+
+---
+
+# 3. BRANDING AND VISUAL IDENTITY
+
+Create a premium and professional identity for Campus Orbit.
+
+### Brand Identity
+
+Name: CAMPUS ORBIT
+
+Create an original modern orbital-inspired logo representing:
+- Education
+- Innovation
+- Connectivity
+- Technology
+- Academic growth
+
+### Color Palette
+
+Primary:
+- Deep Navy Blue
+- Royal Blue
+- White
+
+Secondary:
+- Light Grey
+- Cyan
+- Subtle Indigo
+
+Use colors consistently throughout the platform.
+
+### UI/UX Style
+
+Design a sophisticated enterprise SaaS dashboard.
+
+Requirements:
+- Clean and minimal interface.
+- Modern typography.
+- Consistent spacing.
+- Rounded cards.
+- Subtle shadows.
+- Smooth transitions.
+- Professional charts.
+- Attractive data tables.
+- Clear navigation hierarchy.
+- Beautiful forms.
+- Responsive layouts.
+- Accessible contrast.
+
+Implement both light and dark themes.
+
+Avoid excessive gradients, unnecessary animations, overcrowded dashboards and decorative elements that reduce usability.
+
+The interface should feel like a premium university management SaaS platform.
+
+---
+
+# 4. LANDING PAGE
+
+Create a professional public-facing landing page.
+
+### Navigation Bar
+- Campus Orbit logo.
+- Home.
+- About.
+- Features.
+- Modules.
+- Contact.
+- Login.
+- Get Started.
+
+### Hero Section
+
+Headline:
+
+"One Campus. One Connected Ecosystem."
+
+Subheading:
+
+"Campus Orbit brings academic management, student collaboration, faculty operations and institutional administration together in one intelligent digital platform."
+
+Primary buttons:
+- Explore Platform
+- Login to Campus Orbit
+
+### Landing Page Sections
+
+1. Hero section.
+2. About Campus Orbit.
+3. Platform features.
+4. Academic management overview.
+5. Campus Collaboration Hub showcase.
+6. Role-based platform overview.
+7. Benefits for students.
+8. Benefits for faculty.
+9. Benefits for administrators.
+10. Contact section.
+11. Footer.
+
+Use modern illustrations, meaningful icons and a professional layout.
+
+The public landing page must be separate from authenticated dashboards.
+
+---
+
+# 5. AUTHENTICATION AND ROLE-BASED ACCESS CONTROL
+
+Create a secure authentication system using Firebase Authentication.
+
+Support five user roles:
+
+1. Super Administrator
+2. College Administrator
+3. Faculty
+4. Student
+5. Parent / Guardian
+
+### Authentication Features
+
+- Email and password login.
+- Google sign-in.
+- Forgot password.
+- Password reset.
+- Secure logout.
+- Session persistence.
+- Protected routes.
+- Role-based dashboard redirection.
+- User profile management.
+- Account status management.
+
+### Role-Based Access
+
+**Super Administrator**
+- Complete institutional configuration.
+- Manage college administrators.
+- Manage system permissions.
+- View audit logs.
+- Configure platform settings.
+- Monitor system activity.
+
+**College Administrator**
+- Student management.
+- Faculty management.
+- Departments.
+- Courses.
+- Timetable.
+- Attendance monitoring.
+- Finance.
+- Grievances.
+- Facilities.
+- Events.
+- Institutional analytics.
+
+**Faculty**
+- Faculty dashboard.
+- Assigned classes.
+- Timetable.
+- Attendance.
+- QR attendance.
+- Assignments.
+- Examination marks.
+- Academic results.
+- Student progress.
+- Project mentorship.
+
+**Student**
+- Personal dashboard.
+- Attendance.
+- Examination results.
+- Timetable.
+- Assignments.
+- Study materials.
+- Fees.
+- Grievances.
+- Events.
+- Campus Collaboration Hub.
+- Placement opportunities.
+
+**Parent / Guardian**
+- Linked student profile.
+- Attendance.
+- Academic results.
+- Fee status.
+- Examination schedules.
+- Notices.
+- Mentor contact.
+
+Important security requirement:
+
+Do not hardcode any person's email address as a permanent super administrator. Create a secure first-administrator bootstrap process using server-side authorization. Assign roles through trusted administrative workflows or Firebase custom claims.
+
+---
+
+# 6. ADMINISTRATIVE DASHBOARD
+
+Build a comprehensive institutional administration dashboard.
+
+### Dashboard Statistics
+
+- Total students.
+- Total faculty.
+- Total departments.
+- Total courses.
+- Total active classes.
+- Overall attendance.
+- Average academic performance.
+- Pending fees.
+- Active grievances.
+- Upcoming examinations.
+
+### Dashboard Visualizations
+
+- Student distribution by department.
+- Semester-wise student distribution.
+- Attendance trends.
+- Academic performance.
+- Fee collection statistics.
+- Faculty workload.
+- Recent activities.
+- Upcoming institutional events.
+
+### Quick Actions
+
+- Add Student.
+- Add Faculty.
+- Create Department.
+- Create Course.
+- Publish Notice.
+- Create Timetable.
+- Manage Attendance.
+- View Grievances.
+
+All analytics must be calculated from actual database records.
+
+---
+
+# 7. STUDENT MANAGEMENT SYSTEM
+
+Create a complete student information management system.
+
+Features:
+
+- Add student.
+- Edit student.
+- Delete or deactivate student.
+- Student ID generation.
+- Profile photograph.
+- Personal details.
+- Contact information.
+- Department allocation.
+- Course allocation.
+- Semester allocation.
+- Guardian details.
+- Academic history.
+- Attendance history.
+- Fee records.
+- Examination records.
+
+Additional features:
+
+- Bulk CSV/Excel import.
+- Student search.
+- Department filters.
+- Semester filters.
+- Sorting.
+- Pagination.
+- Individual student profile pages.
+
+---
+
+# 8. FACULTY MANAGEMENT SYSTEM
+
+Create a dedicated faculty administration module.
+
+Features:
+
+- Add faculty.
+- Edit faculty profile.
+- Faculty ID generation.
+- Department allocation.
+- Subject allocation.
+- Class allocation.
+- Qualification details.
+- Experience details.
+- Faculty contact information.
+- Teaching workload.
+- Faculty timetable.
+- Faculty attendance.
+- Assigned student lists.
+- Faculty activity overview.
+
+Allow administrators to assign faculty to specific subjects, semesters and classes.
+
+Faculty members should only access their assigned academic responsibilities.
+
+---
+
+# 9. DEPARTMENT AND COURSE MANAGEMENT
+
+Features:
+
+- Create departments.
+- Edit departments.
+- Assign HOD.
+- Add academic programs.
+- Create courses.
+- Create subjects.
+- Assign credits.
+- Manage semester structures.
+- Assign faculty.
+- Manage student enrollment.
+- View department analytics.
+
+---
+
+# 10. SMART ATTENDANCE MANAGEMENT
+
+Develop a complete attendance management system.
+
+### Features
+
+- QR-code attendance.
+- Faculty-generated attendance sessions.
+- Student QR scanning.
+- Manual attendance.
+- Present and absent tracking.
+- Late attendance.
+- Subject-wise attendance.
+- Date-wise attendance.
+- Attendance history.
+- Monthly reports.
+- Attendance correction requests.
+
+### Attendance Analytics
+
+Calculate:
+
+- Total conducted classes.
+- Classes attended.
+- Classes missed.
+- Attendance percentage.
+
+Provide warning notifications when attendance falls below 75%.
+
+Prevent duplicate attendance and unauthorized submissions.
+
+Use server-side validation for attendance session eligibility and duplicate prevention.
+
+---
+
+# 11. EXAMINATION AND RESULTS MANAGEMENT
+
+Features:
+
+- Create examinations.
+- Manage examination schedules.
+- Internal assessments.
+- Enter subject-wise marks.
+- Maximum marks configuration.
+- Grade calculation.
+- SGPA calculation.
+- CGPA calculation.
+- Semester results.
+- Academic performance reports.
+- Result publication.
+
+Students can view officially published results.
+
+Faculty can enter marks only for assigned subjects.
+
+Use configurable grading schemes instead of assuming a universal grading formula.
+
+---
+
+# 12. TIMETABLE MANAGEMENT
+
+Develop an interactive timetable system.
+
+Features:
+
+- Weekly timetable.
+- Subject allocation.
+- Faculty allocation.
+- Classroom allocation.
+- Lecture timings.
+- Semester-based timetable.
+- Faculty timetable.
+- Student timetable.
+- Classroom availability.
+
+Implement conflict detection for:
+- Faculty.
+- Classrooms.
+- Student groups.
+- Time slots.
+
+Notify affected users when timetable changes are published.
+
+---
+
+# 13. ASSIGNMENT AND LEARNING RESOURCE MANAGEMENT
+
+Features:
+
+- Faculty creates assignments.
+- Assignment deadlines.
+- Assignment descriptions.
+- PDF and document uploads.
+- Student submissions.
+- Faculty evaluation.
+- Marks and feedback.
+- Study materials.
+- Subject-wise resources.
+- Semester-wise resources.
+- Downloadable learning documents.
+
+Use Firebase Storage for file uploads with appropriate security rules.
+
+---
+
+# 14. GRIEVANCE MANAGEMENT SYSTEM
+
+Create a confidential grievance redressal platform.
+
+Features:
+
+- Submit grievance.
+- Select category.
+- Add description.
+- Upload attachments.
+- Set priority.
+- Track grievance.
+- Assign administrators.
+- Add resolution notes.
+- View grievance history.
+
+Statuses:
+- Submitted.
+- Under Review.
+- Assigned.
+- In Progress.
+- Resolved.
+- Rejected.
+
+Students can access their own grievances.
+
+Authorized administrators can manage and resolve grievances.
+
+---
+
+# 15. FEE AND FINANCE MANAGEMENT
+
+Features:
+
+- Create fee structures.
+- Semester fee allocation.
+- Student invoices.
+- Payment status.
+- Payment history.
+- Outstanding balance.
+- Payment receipts.
+- Fee reminders.
+- Fee reports.
+- Department-wise financial analytics.
+
+Support configurable payment gateway integration.
+
+Do not mark payments as successful without verified gateway confirmation.
+
+---
+
+# 16. NOTICE AND ANNOUNCEMENT MANAGEMENT
+
+Features:
+
+- Institutional notices.
+- Department notices.
+- Student announcements.
+- Faculty announcements.
+- Examination notices.
+- Event announcements.
+- Important notifications.
+- Scheduled announcements.
+
+Display relevant announcements on each user's dashboard.
+
+---
+
+# 17. CAMPUS FACILITY MANAGEMENT
+
+Manage:
+
+- Classrooms.
+- Laboratories.
+- Seminar halls.
+- Auditoriums.
+- Libraries.
+- Sports facilities.
+- Projectors.
+- Equipment.
+
+Features:
+- View facility availability.
+- Submit booking requests.
+- Approve or reject bookings.
+- Conflict detection.
+- Reservation history.
+
+---
+
+# 18. CERTIFICATE MANAGEMENT
+
+Allow students to request:
+
+- Bonafide certificates.
+- Study certificates.
+- Transfer certificates.
+- Other institutional documents.
+
+Features:
+- Certificate request.
+- Request tracking.
+- Administrative approval.
+- PDF generation.
+- Downloadable certificates.
+- Request history.
+
+---
+
+# 19. CAMPUS EVENTS MANAGEMENT
+
+Features:
+
+- Create events.
+- Workshops.
+- Seminars.
+- Technical competitions.
+- Cultural activities.
+- Sports events.
+- Event registration.
+- Participant management.
+- Event calendar.
+- Event announcements.
+
+---
+
+# 20. CAMPUS COLLABORATION HUB
+
+This is one of the signature features of Campus Orbit.
+
+Create a dedicated student collaboration and project networking ecosystem.
+
+### Objective
+
+Enable students from different departments and semesters to connect, discover project opportunities, form interdisciplinary teams, collaborate on projects, share ideas and showcase completed work.
+
+### A. Collaboration Profiles
+
+Allow students to create profiles containing:
+
+- Name.
+- Profile photograph.
+- Department.
+- Semester.
+- Technical interests.
+- Areas of interest.
+- Preferred project domains.
+- Previous projects.
+- Short introduction.
+- Collaboration preferences.
+
+Create a searchable student collaboration directory.
+
+### B. Project Discovery
+
+Students can:
+
+- Publish project ideas.
+- Explore available projects.
+- Search projects.
+- Filter by domain.
+- Filter by department.
+- Filter by technology.
+- View project details.
+- Request to join projects.
+
+Categories:
+
+- AI and Machine Learning.
+- Internet of Things.
+- Web Development.
+- Mobile Applications.
+- Robotics.
+- Cloud Computing.
+- Cybersecurity.
+- Data Science.
+- Electronics.
+- Social Innovation.
+
+### C. Team Formation
+
+Features:
+
+- Create project teams.
+- Set team name.
+- Define objectives.
+- Select project domain.
+- Set required team size.
+- Invite students.
+- Accept invitations.
+- Approve joining requests.
+- Assign team leaders.
+- Assign team responsibilities.
+- Manage team membership.
+
+Support interdisciplinary collaboration.
+
+### D. Collaboration Requests
+
+Features:
+
+- Send joining requests.
+- Send invitations.
+- Accept requests.
+- Reject requests.
+- Withdraw requests.
+- View request history.
+
+Statuses:
+- Pending.
+- Accepted.
+- Rejected.
+- Withdrawn.
+
+Prevent duplicate requests.
+
+### E. Project Workspace
+
+Each approved project team gets its own workspace.
+
+Include:
+
+- Project overview.
+- Project description.
+- Team members.
+- Objectives.
+- Milestones.
+- Task assignments.
+- Deadlines.
+- Project progress.
+- Announcements.
+- Resources.
+- File attachments.
+
+Project statuses:
+- Planning.
+- In Progress.
+- Under Review.
+- Completed.
+- On Hold.
+
+### F. Task Management
+
+Features:
+
+- Create tasks.
+- Assign tasks.
+- Set deadlines.
+- Set priorities.
+- Update task status.
+- Track completion.
+- Create milestones.
+- View overdue tasks.
+- Project progress charts.
+
+### G. Team Discussions
+
+Features:
+
+- Project-specific discussion boards.
+- Post messages.
+- Reply to messages.
+- Share updates.
+- Team announcements.
+- Timestamps.
+- Message authors.
+
+Restrict private discussions to authorized project members.
+
+### H. Project Showcase
+
+Allow students to publish completed projects.
+
+Display:
+
+- Project title.
+- Project description.
+- Problem statement.
+- Solution.
+- Technologies used.
+- Images.
+- Demo video link.
+- GitHub repository link.
+- Team members.
+- Project outcomes.
+
+Create a beautiful searchable project gallery.
+
+### I. Faculty Mentorship
+
+Features:
+
+- Request faculty mentors.
+- Accept mentorship requests.
+- Assign faculty mentors.
+- Provide feedback.
+- Review milestones.
+- Monitor progress.
+- Suggest improvements.
+
+### J. Collaboration Analytics
+
+Display:
+
+- Active projects.
+- Active teams.
+- Total collaborators.
+- Completed projects.
+- Pending requests.
+- Department-wise participation.
+- Popular project categories.
+- Project progress.
+
+### Campus Collaboration Hub Navigation
+
+1. Overview.
+2. Discover Projects.
+3. My Collaborations.
+4. Find Collaborators.
+5. Team Workspace.
+6. Tasks and Milestones.
+7. Discussions.
+8. Project Showcase.
+9. Faculty Mentorship.
+
+This must be a fully functional module, not a static project gallery.
+
+---
+
+# 21. STUDENT SKILL AND PLACEMENT DEVELOPMENT
+
+Create a dedicated student career development module.
+
+Features:
+
+- Student skill profiles.
+- Technical skills.
+- Soft skills.
+- Certifications.
+- Project portfolios.
+- Internship listings.
+- Placement announcements.
+- Job opportunities.
+- Resume uploads.
+- Career progress tracking.
+
+Allow administrators to publish opportunities and students to register or apply.
+
+Keep this module focused on career development, separate from Campus Collaboration Hub.
+
+---
+
+# 22. PARENT AND GUARDIAN PORTAL
+
+Create a dedicated parent portal.
+
+Features:
+
+- Verified student linking.
+- Student profile.
+- Attendance monitoring.
+- Academic results.
+- Examination schedules.
+- Fee status.
+- Important notices.
+- Attendance alerts.
+- Mentor contact.
+
+Parents must only access their verified linked students' information.
+
+---
+
+# 23. GLOBAL SEARCH AND COMMAND PALETTE
+
+Implement a global command palette using Ctrl + K.
+
+Allow users to search:
+
+- Students.
+- Faculty.
+- Departments.
+- Courses.
+- Subjects.
+- Timetables.
+- Notices.
+- Facilities.
+- Events.
+- Projects.
+
+All search results must respect role-based access permissions.
+
+---
+
+# 24. NOTIFICATION SYSTEM
+
+Build a centralized notification system.
+
+Notifications should support:
+
+- Attendance alerts.
+- Timetable updates.
+- Assignment deadlines.
+- Examination announcements.
+- Result publications.
+- Fee reminders.
+- Grievance status changes.
+- Project invitations.
+- Collaboration requests.
+- Task deadlines.
+- Faculty feedback.
+- Event announcements.
+
+Support in-app notifications and optional email/push notifications where configured.
+
+Use real-time Firestore listeners for relevant updates.
+
+---
+
+# 25. FIRESTORE DATABASE ARCHITECTURE
+
+Use Google Cloud Firestore.
+
+Create well-structured collections:
+
+- users
+- students
+- faculty
+- parents
+- departments
+- courses
+- subjects
+- enrollments
+- attendance
+- attendanceSessions
+- examinations
+- results
+- assignments
+- submissions
+- timetables
+- notices
+- grievances
+- feeStructures
+- invoices
+- payments
+- facilities
+- bookings
+- certificates
+- events
+- registrations
+- collaborationProfiles
+- collaborationProjects
+- collaborationTeams
+- collaborationRequests
+- collaborationInvitations
+- collaborationTasks
+- collaborationMilestones
+- collaborationDiscussions
+- collaborationResources
+- collaborationShowcase
+- mentorshipRequests
+- studyGroups
+- resources
+- placementOpportunities
+- notifications
+- auditLogs
+- institutionalSettings
+
+Implement:
+- Real-time listeners.
+- Data validation.
+- Secure document access.
+- Firestore transactions.
+- Data ownership.
+- Role-based authorization.
+- Audit trails.
+- Proper indexing.
+- Secure file storage.
+
+Avoid unrestricted collection access and excessive client-side data fetching.
+
+---
+
+# 26. SECURITY ARCHITECTURE
+
+Implement security at both frontend and backend/database layers.
+
+Requirements:
+
+- Firebase Authentication.
+- Role-based access control.
+- Firestore Security Rules.
+- Firebase Storage Rules.
+- Trusted role assignment.
+- Protected routes.
+- Server-side validation.
+- Secure file uploads.
+- Parent-student verification.
+- Grade modification restrictions.
+- Attendance integrity.
+- Secure grievance records.
+- Private team workspaces.
+- Audit logging.
+
+Never trust frontend role checks alone.
+
+Never expose private credentials or API keys.
+
+---
+
+# 27. REAL-TIME SYNCHRONIZATION
+
+Use Firestore onSnapshot listeners.
+
+Examples:
+
+- Faculty marks attendance and the student dashboard updates.
+- Administrator publishes a notice and users receive it.
+- Faculty publishes results and students see them.
+- Timetable changes appear on affected dashboards.
+- Project invitations update collaboration requests.
+- Task updates appear in team workspaces.
+- Grievance status changes update student records.
+
+Implement optimistic updates only where appropriate, with error handling and rollback.
+
+Provide clear synchronization and network status indicators.
+
+---
+
+# 28. PWA AND ANDROID SUPPORT
+
+Make Campus Orbit installable as a Progressive Web Application.
+
+Implement:
+
+- manifest.webmanifest.
+- Service worker.
+- Application icons.
+- Offline application shell.
+- IndexedDB.
+- Install prompt.
+- Responsive layouts.
+- Network status indicator.
+- Cached static resources.
+- Appropriate offline states.
+
+Ensure sensitive information is not stored insecurely in shared device caches.
+
+Prepare the project for Android packaging using Trusted Web Activity or Capacitor.
+
+---
+
+# 29. APPLICATION LAYOUT
+
+### Desktop Layout
+
+- Collapsible sidebar.
+- Top navigation.
+- Main content section.
+- Search.
+- Notifications.
+- User profile.
+- Theme switcher.
+
+### Mobile Layout
+
+- Compact header.
+- Mobile navigation.
+- Responsive dashboard cards.
+- Mobile-friendly forms.
+- Touch-friendly buttons.
+- Responsive data tables.
+- Mobile QR scanner.
+
+### Dashboard Structure
+
+Admin:
+- Overview.
+- Students.
+- Faculty.
+- Departments.
+- Courses.
+- Attendance.
+- Examinations.
+- Timetable.
+- Finance.
+- Grievances.
+- Facilities.
+- Certificates.
+- Events.
+- Collaboration.
+- Analytics.
+- Settings.
+
+Faculty:
+- Overview.
+- My Classes.
+- Timetable.
+- Attendance.
+- Assignments.
+- Examinations.
+- Results.
+- Students.
+- Mentorship.
+- Notifications.
+
+Student:
+- Overview.
+- My Profile.
+- Attendance.
+- Academics.
+- Timetable.
+- Assignments.
+- Results.
+- Learning Resources.
+- Fees.
+- Grievances.
+- Campus Collaboration Hub.
+- Study Groups.
+- Placements.
+- Events.
+- Notifications.
+
+Parent:
+- Overview.
+- Student Profile.
+- Attendance.
+- Academic Results.
+- Examinations.
+- Fees.
+- Notices.
+- Mentor Contact.
+
+Super Administrator:
+- System Overview.
+- Administrator Management.
+- Institutional Settings.
+- Security.
+- Permissions.
+- Audit Logs.
+- System Activity.
+
+---
+
+# 30. CODEBASE ORGANIZATION
+
+Use a clean modular folder structure.
+
+src/
+  components/
+  layouts/
+  pages/
+    public/
+    admin/
+    faculty/
+    student/
+    parent/
+    superadmin/
+  modules/
+    students/
+    faculty/
+    departments/
+    courses/
+    attendance/
+    examinations/
+    results/
+    timetable/
+    assignments/
+    resources/
+    grievances/
+    finance/
+    facilities/
+    certificates/
+    events/
+    collaboration/
+    placements/
+    notifications/
+  services/
+    firebase/
+    auth/
+    firestore/
+    storage/
+  hooks/
+  contexts/
+  routes/
+  types/
+  utils/
+  styles/
+
+public/
+  icons/
+  manifest.webmanifest
+  sw.js
+
+firestore.rules
+firestore.indexes.json
+firebase.json
+
+Maintain strict TypeScript, reusable components and consistent naming conventions.
+
+---
+
+# 31. DEVELOPMENT PHASES
+
+Build the project progressively while maintaining a working application.
+
+PHASE 1:
+- Project setup.
+- Branding.
+- Landing page.
+- Authentication.
+- Role-based access.
+- Navigation.
+- Dashboard layouts.
+
+PHASE 2:
+- Student management.
+- Faculty management.
+- Department management.
+- Course management.
+
+PHASE 3:
+- Attendance.
+- QR scanning.
+- Examination.
+- Results.
+- Timetable.
+
+PHASE 4:
+- Assignments.
+- Resources.
+- Grievances.
+- Finance.
+- Notifications.
+
+PHASE 5:
+- Facility booking.
+- Certificates.
+- Events.
+- Parent portal.
+- Placement management.
+
+PHASE 6:
+- Campus Collaboration Hub.
+- Project discovery.
+- Team formation.
+- Project workspace.
+- Task management.
+- Discussions.
+- Project showcase.
+- Faculty mentorship.
+
+PHASE 7:
+- Firestore integration.
+- Security rules.
+- Real-time synchronization.
+- PWA.
+- Offline support.
+
+PHASE 8:
+- Testing.
+- Bug fixing.
+- Performance optimization.
+- Deployment preparation.
+
+Do not generate disconnected modules.
+
+Each phase must integrate with the existing application.
+
+---
+
+# 32. QUALITY ASSURANCE AND TESTING
+
+Verify the following before considering the application complete:
+
+- Login works.
+- Role-based redirects work.
+- Protected routes work.
+- CRUD operations work.
+- Search and filters work.
+- Attendance calculations work.
+- QR attendance prevents duplicate records.
+- SGPA/CGPA calculations follow configured grading rules.
+- Timetable conflicts are detected.
+- Assignment submissions work.
+- Grievance workflows work.
+- Fee statuses are accurate.
+- Parent access is restricted.
+- Collaboration requests work.
+- Project teams work.
+- Task assignments work.
+- Discussions are private to team members.
+- Faculty mentorship works.
+- Notifications update correctly.
+- Firestore rules enforce authorization.
+- Mobile responsiveness works.
+- PWA installation works.
+
+Provide loading indicators, validation messages, error states and useful empty states throughout the application.
+
+---
+
+# 33. FINAL DEVELOPMENT INSTRUCTIONS
+
+Build Campus Orbit as a complete digital campus operating system.
+
+Do not build only a landing page.
+
+Do not create static dashboard mockups and call them functional.
+
+Do not create buttons without working actions.
+
+Do not use hardcoded sample data as production data.
+
+Do not remove any requested module.
+
+Do not hardcode an administrator email address.
+
+Do not duplicate authentication systems.
+
+Do not break the existing application structure when adding modules.
+
+Prioritize:
+1. Functionality.
+2. Security.
+3. User experience.
+4. Responsive design.
+5. Real-time data synchronization.
+6. Scalable architecture.
+7. Maintainable code.
+
+If the entire application exceeds one generation, implement the phases sequentially while retaining all existing files, features and architecture.
+
+At every phase, ensure the project compiles and existing functionality remains operational.
+
+### FINAL EXPECTATION
+
+Deliver a complete, professional, enterprise-grade college management website named **CAMPUS ORBIT**.
+
+It must integrate institutional administration, student management, faculty management, academic operations, attendance, examinations, finance, parent oversight, campus facilities, events, student career development and the signature Campus Collaboration Hub into one centralized platform.
+
+The finished application should be suitable for real institutional deployment and future expansion into an Android application.

@@ -1,0 +1,6 @@
+{
+  "name": "Campus Orbit",
+  "description": "Unified Multi-Role Academic Operations & Smart Campus Management System connecting students, faculty, administrators, and parents.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
